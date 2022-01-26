@@ -46,13 +46,6 @@ export const stopFight = () => {
   }, 0);
 };
 
-export const startFight = (props) => {
-  setInnerAlerts(getInnerAlerts() ? getFilteredAndMapInnerAlerts() : '');
-  props.setIntervalCount(0);
-  props.setPhaseTime(props.currTimer.roundTime.time);
-  props.setCurrentPhase(ROUND);
-};
-
 export const preparationFinished = (props) =>
   props.currentPhase === PREPARE &&
   props.intervalCount === props.currTimer.prepareTime.time;

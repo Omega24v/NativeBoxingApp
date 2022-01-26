@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { connect } from 'react-redux';
-import { DEFAULT } from '../../constatns/timerDefaultValues';
+import { DEFAULT, ROUND } from '../../constatns/timerDefaultValues';
 import { getTotalTime } from '../../utils/common';
 import { msToHMS } from '../../utils/timeConverter';
 import {
@@ -30,11 +30,19 @@ import TimerButton from './TimerButton';
 import {
   preparationFinished,
   roundFinished,
+  stopFight,
   warningFinished,
 } from '../../lib/timerStart';
 
 const Timer = (props) => {
   const [innerAlerts, setInnerAlerts] = useState(null);
+
+  function startFight() {
+    setInnerAlerts(getInnerAlerts() ? getFilteredAndMapInnerAlerts() : '');
+    props.setIntervalCount(0);
+    props.setPhaseTime(props.currTimer.roundTime.time);
+    props.setCurrentPhase(ROUND);
+  }
 
   useEffect(() => {
     if (innerAlerts) {
