@@ -23,7 +23,7 @@
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "~3.10.1",
     "react-redux": "^7.2.6",
-    "tailwind-rn": "^3.0.1"
+    "tailwind-rn": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
