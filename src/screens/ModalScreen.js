@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import tw from 'tailwind-rn';
+import { useTailwind } from 'tailwind-rn';
 
 const ModalScreen = () => {
   const [timerName, setTimerName] = useState(null);
@@ -11,15 +11,19 @@ const ModalScreen = () => {
 
   const incompleteForm = !roundTime || !round;
   return (
-    <SafeAreaView style={tw('flex-1')}>
-      <View style={tw(`mt-5`)}>
-        <Text style={tw('text-2xl text-gray-500 p-2 font-bold text-center')}>
+    <SafeAreaView style={useTailwind('flex-1')}>
+      <View style={useTailwind(`mt-5`)}>
+        <Text
+          style={useTailwind(
+            'text-2xl text-gray-500 p-2 font-bold text-center'
+          )}
+        >
           Boxing Timer:
         </Text>
       </View>
-      <View style={tw('flex-1 items-center pt-1')}>
-        <View style={tw(`flex-row`)}>
-          <Text style={tw('text-xl text-red-400 p-4 font-bold')}>
+      <View style={useTailwind('flex-1 items-center pt-1')}>
+        <View style={useTailwind(`flex-row`)}>
+          <Text style={useTailwind('text-xl text-red-400 p-4 font-bold')}>
             Timer Name:
           </Text>
           <TextInput
@@ -29,8 +33,12 @@ const ModalScreen = () => {
           />
         </View>
 
-        <View style={tw(`flex-row`)}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+        <View style={useTailwind(`flex-row`)}>
+          <Text
+            style={useTailwind(
+              'text-xl text-center text-red-400 p-4 font-bold'
+            )}
+          >
             Rounds:
           </Text>
           <TextInput
@@ -42,8 +50,12 @@ const ModalScreen = () => {
           />
         </View>
 
-        <View style={tw(`flex-row`)}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+        <View style={useTailwind(`flex-row`)}>
+          <Text
+            style={useTailwind(
+              'text-xl text-center text-red-400 p-4 font-bold'
+            )}
+          >
             Round Time:
           </Text>
           <TextInput
@@ -55,8 +67,12 @@ const ModalScreen = () => {
           />
         </View>
 
-        <View style={tw(`flex-row`)}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+        <View style={useTailwind(`flex-row`)}>
+          <Text
+            style={useTailwind(
+              'text-xl text-center text-red-400 p-4 font-bold'
+            )}
+          >
             Rest Time:
           </Text>
           <TextInput
@@ -68,8 +84,12 @@ const ModalScreen = () => {
           />
         </View>
 
-        <View style={tw(`flex-row`)}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+        <View style={useTailwind(`flex-row`)}>
+          <Text
+            style={useTailwind(
+              'text-xl text-center text-red-400 p-4 font-bold'
+            )}
+          >
             Prepare time:
           </Text>
           <TextInput
@@ -81,8 +101,12 @@ const ModalScreen = () => {
           />
         </View>
 
-        <View style={tw(`flex-row`)}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+        <View style={useTailwind(`flex-row`)}>
+          <Text
+            style={useTailwind(
+              'text-xl text-center text-red-400 p-4 font-bold'
+            )}
+          >
             Warning time:
           </Text>
           <TextInput
@@ -94,8 +118,12 @@ const ModalScreen = () => {
           />
         </View>
 
-        <View style={tw(`flex-row`)}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+        <View style={useTailwind(`flex-row`)}>
+          <Text
+            style={useTailwind(
+              'text-xl text-center text-red-400 p-4 font-bold'
+            )}
+          >
             Circle inner alerts?:
           </Text>
           <TextInput
@@ -107,21 +135,31 @@ const ModalScreen = () => {
           />
         </View>
 
-        <View style={tw(`flex-row`)}>
-          <Text style={tw('text-2xl text-center text-red-400 p-4 font-bold')}>
+        <View style={useTailwind(`flex-row`)}>
+          <Text
+            style={useTailwind(
+              'text-2xl text-center text-red-400 p-4 font-bold'
+            )}
+          >
             TOTAL TIME: 47:10
           </Text>
         </View>
 
-        <View style={tw(`w-full flex-row justify-evenly absolute bottom-10`)}>
+        <View
+          style={useTailwind(
+            `w-full flex-row justify-evenly absolute bottom-10`
+          )}
+        >
           <TouchableOpacity
             disabled={incompleteForm}
             style={[
-              tw('w-36 py-3 rounded-xl bg-red-400'),
-              incompleteForm ? tw('bg-gray-400') : tw('bg-red-400'),
+              useTailwind('w-36 py-3 rounded-xl bg-red-400'),
+              incompleteForm
+                ? useTailwind('bg-gray-400')
+                : useTailwind('bg-red-400'),
             ]}
           >
-            <Text style={tw('text-center text-white text-sm')}>
+            <Text style={useTailwind('text-center text-white text-sm')}>
               Save Settings
             </Text>
           </TouchableOpacity>
@@ -129,11 +167,13 @@ const ModalScreen = () => {
           <TouchableOpacity
             disabled={incompleteForm}
             style={[
-              tw('w-36 py-3 rounded-xl bg-red-400'),
-              incompleteForm ? tw('bg-gray-400') : tw('bg-red-400'),
+              useTailwind('w-36 py-3 rounded-xl bg-red-400'),
+              incompleteForm
+                ? useTailwind('bg-gray-400')
+                : useTailwind('bg-red-400'),
             ]}
           >
-            <Text style={tw('text-center text-white text-sm')}>
+            <Text style={useTailwind('text-center text-white text-sm')}>
               Save As New Timer
             </Text>
           </TouchableOpacity>
