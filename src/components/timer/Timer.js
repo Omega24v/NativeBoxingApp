@@ -49,9 +49,6 @@ const Timer = (props) => {
       if (isInnerAlertsCircleFinished(innerAlerts)) {
         resetInnerAlerts();
       }
-      // if (!isLastRoundSecond()) {
-      //     playInnerAlertSound();
-      // }
     }
 
     if (preparationFinished(props)) {
