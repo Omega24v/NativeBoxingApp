@@ -26,7 +26,7 @@ const TimerButton = (props) => {
       {props.isRunning ? (
         <TouchableOpacity
           onPress={() => stopResetAndTimer(props)}
-          style={tw(`bg-green-600 w-24 mr-3 py-3 rounded-lg`)}
+          style={tw(`bg-red-600 w-24 mr-3 py-3 rounded-lg`)}
         >
           <Text style={tw(`text-center text-white font-bold`)}>Stop</Text>
         </TouchableOpacity>
