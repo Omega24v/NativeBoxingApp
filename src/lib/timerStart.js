@@ -50,7 +50,7 @@ export const preparationFinished = (props) =>
   props.currentPhase === PREPARE &&
   props.intervalCount === props.currTimer.prepareTime.time;
 
-export const startWarning = () => props.setCurrentPhase(WARNING);
+export const startWarning = (props) => props.setCurrentPhase(WARNING);
 
 export const startRest = () => {
   props.setIntervalCount(0);
