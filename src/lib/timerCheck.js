@@ -1,4 +1,4 @@
-import { REST, ROUND, WARNING } from '../constatns/timerDefaultValues';
+import { REST, ROUND } from '../constatns/timerDefaultValues';
 
 export const isRoundPhase = (props) => props.currentPhase === ROUND;
 
@@ -13,23 +13,6 @@ export const isRestFinished = (props) => {
   const isRestFinished = props.intervalCount === props.currTimer.restTime.time;
   const isRestNotSet = props.currTimer.restTime.time === 0;
   return isRestPhase && (isRestFinished || isRestNotSet);
-};
-
-export const isInnerAlerts = (props, alert, prevAlertTime) => {
-  return (
-    props.intervalCount !== 0 &&
-    (props.crurrentPhase === ROUND || props.currentPhase === WARNING) &&
-    !alert.isActivated &&
-    (props.intervalCount / 1000) % (alert.time + (prevAlertTime || 0)) === 0
-  );
-};
-
-export const isInnerAlertsCircleFinished = (innerAlerts) => {
-  return (
-    innerAlerts.filter((alert) => {
-      return !alert.isActivated;
-    }).length === 0
-  );
 };
 
 export const isWarningPhase = (props) => {
