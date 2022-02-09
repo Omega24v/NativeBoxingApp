@@ -13,13 +13,13 @@ const ModalScreen = () => {
   return (
     <SafeAreaView style={tw`flex-1`}>
       <View style={tw`mt-5`}>
-        <Text style={tw('text-2xl text-gray-500 p-2 font-bold text-center')}>
+        <Text style={tw`text-2xl text-gray-500 p-2 font-bold text-center`}>
           Boxing Timer:
         </Text>
       </View>
-      <View style={tw('flex-1 items-center pt-1')}>
+      <View style={tw`flex-1 items-center pt-1`}>
         <View style={tw`flex-row`}>
-          <Text style={tw('text-xl text-red-400 p-4 font-bold')}>
+          <Text style={tw`text-xl text-red-400 p-4 font-bold`}>
             Timer Name:
           </Text>
           <TextInput
@@ -30,7 +30,7 @@ const ModalScreen = () => {
         </View>
 
         <View style={tw`flex-row`}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+          <Text style={tw`text-xl text-center text-red-400 p-4 font-bold`}>
             Rounds:
           </Text>
           <TextInput
@@ -43,7 +43,7 @@ const ModalScreen = () => {
         </View>
 
         <View style={tw`flex-row`}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+          <Text style={tw`text-xl text-center text-red-400 p-4 font-bold`}>
             Round Time:
           </Text>
           <TextInput
@@ -56,7 +56,7 @@ const ModalScreen = () => {
         </View>
 
         <View style={tw`flex-row`}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+          <Text style={tw`text-xl text-center text-red-400 p-4 font-bold`}>
             Rest Time:
           </Text>
           <TextInput
@@ -69,7 +69,7 @@ const ModalScreen = () => {
         </View>
 
         <View style={tw`flex-row`}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+          <Text style={tw`text-xl text-center text-red-400 p-4 font-bold`}>
             Prepare time:
           </Text>
           <TextInput
@@ -82,7 +82,7 @@ const ModalScreen = () => {
         </View>
 
         <View style={tw`flex-row`}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+          <Text style={tw`text-xl text-center text-red-400 p-4 font-bold`}>
             Warning time:
           </Text>
           <TextInput
@@ -95,7 +95,7 @@ const ModalScreen = () => {
         </View>
 
         <View style={tw`flex-row`}>
-          <Text style={tw('text-xl text-center text-red-400 p-4 font-bold')}>
+          <Text style={tw`text-xl text-center text-red-400 p-4 font-bold`}>
             Circle inner alerts?:
           </Text>
           <TextInput
@@ -108,7 +108,7 @@ const ModalScreen = () => {
         </View>
 
         <View style={tw`flex-row`}>
-          <Text style={tw('text-2xl text-center text-red-400 p-4 font-bold')}>
+          <Text style={tw`text-2xl text-center text-red-400 p-4 font-bold`}>
             TOTAL TIME: 47:10
           </Text>
         </View>
@@ -116,24 +116,24 @@ const ModalScreen = () => {
         <View style={tw`w-full flex-row justify-evenly absolute bottom-10`}>
           <TouchableOpacity
             disabled={incompleteForm}
-            style={[
-              tw('w-36 py-3 rounded-xl bg-red-400'),
-              incompleteForm ? tw('bg-gray-400') : tw('bg-red-400'),
-            ]}
+            style={tw.style(
+              'w-36 py-3 rounded-xl bg-red-400',
+              incompleteForm ? 'bg-gray-400' : 'bg-red-400'
+            )}
           >
-            <Text style={tw('text-center text-white text-sm')}>
+            <Text style={tw`text-center text-white text-sm`}>
               Save Settings
             </Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             disabled={incompleteForm}
-            style={[
-              tw('w-36 py-3 rounded-xl bg-red-400'),
-              incompleteForm ? tw('bg-gray-400') : tw('bg-red-400'),
-            ]}
+            style={tw.style(
+              'w-36 py-3 rounded-xl bg-red-400',
+              incompleteForm ? 'bg-gray-400' : 'bg-red-400'
+            )}
           >
-            <Text style={tw('text-center text-white text-sm')}>
+            <Text style={tw`text-center text-white text-sm`}>
               Save As New Timer
             </Text>
           </TouchableOpacity>
